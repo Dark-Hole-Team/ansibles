@@ -1,0 +1,14 @@
+- name: Create User
+  hosts: myhosts
+  become: true
+
+  tasks:
+    - name: Ping Host
+      ansible.builtin.ping:
+
+    - name: Create user
+      ansible.builtin.user:
+        name: vodka
+        password: $6$D.cxqCtiOzKXcgIP$hPSVdCNChj4v33KqE8hipSXA1vP6WthEbqy30.jxtra7h7Voyz4HEZ0/aV6oeSGfJ5J43g3z8hyx.bm0fMn0h0
+        group: docker
+        update_password: on_create

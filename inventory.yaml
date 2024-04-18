@@ -1,0 +1,4 @@
+myhosts:
+  hosts:
+    penguin-devops:
+      ansible_host: ihateall.tech
